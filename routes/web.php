@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\AssetController;
+
+Route::get('/assets', [AssetController::class, 'index'])->name('assets.index');
+Route::get('/assets/create', [AssetController::class, 'create'])->name('assets.create');
+Route::post('/assets', [AssetController::class, 'store'])->name('assets.store');
+Route::get('/assets/{asset}', [AssetController::class, 'edit'])->name('assets.edit');
+Route::put('/assets/{asset}', [AssetController::class, 'update'])->name('assets.update');
+Route::delete('/assets/{asset}', [AssetController::class, 'destroy'])->name('assets.destroy');
+

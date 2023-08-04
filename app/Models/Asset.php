@@ -8,12 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Asset extends Model
 {
-    use SoftDeletes;
+    use HasFactory,SoftDeletes;
 
     protected $fillable = ['name', 'type', 'purchase_date', 'status', 'user_added_id'];
+
+    protected $dates = ['deleted_at'];
 
     public function userAdded()
     {
         return $this->belongsTo(User::class, 'user_added_id');
     }
+
+
 }
