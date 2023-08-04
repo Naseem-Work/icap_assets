@@ -1,10 +1,8 @@
-<!-- resources/views/assets/index.blade.php -->
 @extends('app')
 
 @section('content')
     <div class="container">
         <h1>Assets</h1>
-        <a href="{{ route('assets.create') }}" class="btn btn-primary">Add Asset</a>
         <table class="table mt-3">
             <thead>
             <tr>
@@ -36,5 +34,6 @@
             @endforeach
             </tbody>
         </table>
+        <a href="{{ route('assets.create') }}" class="btn btn-primary float-right">Add Asset</a>
     </div>
 @endsection

@@ -1,4 +1,3 @@
-<!-- resources/views/assets/create.blade.php -->
 @extends('app')
 
 @section('content')
@@ -8,11 +7,12 @@
             @csrf
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" class="form-control" required>
+                <input type="text" name="name" id="name" class="form-control" required pattern="^[a-zA-Z0-9 ]{3,}$">
+
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
-                <input type="text" name="type" id="type" class="form-control" required>
+                <input type="text" name="type" id="type" class="form-control" maxlength="25" required>
             </div>
             <div class="form-group">
                 <label for="purchase_date">Purchase Date</label>
@@ -33,7 +33,7 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Add Asset</button>
+            <button type="submit" class="btn btn-primary mt-3">Add Asset</button>
         </form>
     </div>
 @endsection

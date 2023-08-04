@@ -1,4 +1,3 @@
-<!-- resources/views/app.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,12 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Your navigation menu or any common header elements here -->
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-cogs"></i> Asset Management System
+        </a>
+
+    </div>
 </nav>
 
 <div class="container mt-4">
