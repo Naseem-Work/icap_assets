@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+
+
+
         <h1>Assets</h1>
         <table class="table mt-3">
             <thead>
